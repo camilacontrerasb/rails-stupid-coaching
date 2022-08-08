@@ -4,10 +4,10 @@ class QuestionsController < ApplicationController
 
   def answer
     # @replies = %w question
-    @query = params[:question]
-    if @query == "I am going to work"
+    @question = params[:question]
+    if @question == "I am going to work"
       @answer = "Great!"
-    elsif @query.include?("?")
+    elsif @question.include?('?')
       @answer = "Silly question, get dressed and go to work!"
     else @answer = "I don't care, get dressed and go to work!"
     end
